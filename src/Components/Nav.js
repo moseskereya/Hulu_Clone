@@ -20,7 +20,7 @@ class Nav extends Component {
              <h1>HULU</h1>
                 <ul>
                     <li>
-                        <Link className="link" to="/">Home</Link>
+                        <Link className="link" to="/home">Home</Link>
                     </li>
                     <li>
                         <Link className="link" to="/hulumovies">Movies</Link>

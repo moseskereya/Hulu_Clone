@@ -16,7 +16,7 @@ function Home() {
                         <Nav />
                         <hr/>
                         <Switch>
-                            <Route exact path="/" component={Banner} />
+                            <Route exact path="/home" component={Banner} />
                             <Route path="/hulumovies" component={Movie} />
                             <Route path="/Movie/:Id" component={Detail} />
                         </Switch>
