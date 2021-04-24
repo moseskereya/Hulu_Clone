@@ -348,12 +348,6 @@ height: 300px;
 }
 
 @media screen and (max-width: 500px){
-    nav{
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-    }
     .search input{
         width: 60%;
         margin:1.3rem 0;
