@@ -1,10 +1,11 @@
 import React from 'react'
 import Movie from './Components/Movie';
-import { HashRouter as Router, Route, Switch } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import { Provider } from "./Components/context"
 import Detail from "./Components/MovieDetail"
 import Nav from './Components/Nav';
 import Banner from "./Banner"
+import NotFound from './404';
 
 
 function Home() {
@@ -14,11 +15,13 @@ function Home() {
                 <React.Fragment>
                     <div className="App">
                         <Nav />
-                        <hr/>
                         <Switch>
-                            <Route exact path="/home" component={Banner} />
-                            <Route path="/hulumovies" component={Movie} />
-                            <Route path="/Movie/:Id" component={Detail} />
+                            <Route exact path="/"
+                                component={Banner} />
+                            <Route path="/movies" component={Movie} />
+                            <Route path="/movie/:Id" component={Detail} />
+                            <Route path="*" component={NotFound} />
+
                         </Switch>
                     </div>
                 </React.Fragment>

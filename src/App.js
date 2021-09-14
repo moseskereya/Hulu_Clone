@@ -7,7 +7,6 @@ function App() {
     return (
         <React.Fragment>
             <Home />
-            <hr />
             <Footer />
         </React.Fragment>
     );

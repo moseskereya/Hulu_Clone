@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import axios from 'axios'
 import Spinner from './Components/Spinner'
+import Typical from 'react-typical'
+import { Link } from 'react-router-dom';
 class Banner extends Component {
     constructor(props) {
         super(props);
@@ -35,6 +37,18 @@ class Banner extends Component {
                     backgroundRepeat: 'no-repeat',
                     backgroundImage: `url(${baseUrl}/${banner.poster_path || banner.backdrop_path})`
                 }}>
+                <div className="banner_content">
+                    <Typical
+                        steps={['Welcome to Hulu Clone', 1000, 'You can get to know movies from all around the world!', 500, 'Have fun with us!!', 1000]}
+                        loop={Infinity}
+                        wrapper="h2"
+                    />
+                </div>
+                <div className="banner_content">
+                    <Link to="/movies">
+                       <button className="viewmore">View More</button>
+                    </Link>
+                </div>
             </div>
         );
     }

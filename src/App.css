@@ -46,6 +46,9 @@ body{
 /* Header */
 .search{
     margin: 3rem;
+    display: flex;
+    justify-content: end;
+    align-items: center;
 }
 nav{
     margin:2rem 0;
@@ -99,8 +102,37 @@ nav ul li{
  width: 100%;
  background-position: center;
  background-repeat: no-repeat;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ flex-direction: column;
+}
+.banner_content{
+    z-index: 100;
+}
+.viewmore{
+    padding: 10px 15px;
+    margin-top: 3rem;
+    z-index: 100;
+    background-color: orange;
+    border: none;
+    cursor: pointer;
+    transition: .5s ease-in-out;
 }
 
+.viewmore:hover{
+    background-color: var(--main-color);
+}
+
+.banners::before{
+    position: absolute;
+    content: '';
+    left: 0;
+    right: 0;
+    height: inherit;
+    width: inherit;
+    background-image: linear-gradient(345deg, black, rgba(13, 15, 36, 0.637));
+}
 .search input{
     padding: 6px;
     margin: 3px;
@@ -269,6 +301,17 @@ height: 300px;
 .movies_items_images img{
     width: 200px;
     display: flex;
+}
+.not-found{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.not-found h1{
+    font-size: 3rem;
+    margin: 2rem 0;
 }
 .fa{
     padding: 5px 0;

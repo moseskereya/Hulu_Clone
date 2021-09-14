@@ -80,7 +80,7 @@ class Movie extends Component {
                                     })}
                                 </div>
                                 <h2 className="collection_title">Popular Movies</h2>
-                                <div className="movies">
+                                <div className="movies popular">
                                     {Trending.map(trend => {
                                         return (
                                             <div key={trend.id} className="movies_items">
@@ -137,7 +137,7 @@ class Movie extends Component {
                                 </div>
 
                                 <h2 className="collection_title">Comedy Movies</h2>
-                                <div className="movies">
+                                <div className="movies comedy">
                                     {Comedy.map(trend => {
                                         return (
                                             <div key={trend.id} className="movies_items">
